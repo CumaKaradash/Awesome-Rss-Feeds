@@ -1,6 +1,5 @@
 # RSS Beslemeleri Koleksiyonu
 ---
-
 ## Proje Hakkında
 
 Bu proje, popüler web siteleri ve servisler için kullanılabilir RSS/Atom beslemelerinin kapsamlı bir koleksiyonudur. Haber siteleri, sosyal medya platformları, teknoloji blogları ve daha fazlası için düzenli olarak güncellenen RSS kaynakları sunmaktadır.
