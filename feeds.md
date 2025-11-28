@@ -1,140 +1,140 @@
-# 📡 RSS Besleme Listesi
+RSS Besleme Listesi
 
-Bu dosya, kategorilere ayrılmış tüm RSS/Atom besleme adreslerini içerir. Her bir kaynak test edilmiş ve çalışır durumdadır.
+Bu dosya, kategorilere ayrılmış tüm RSS/Atom besleme adreslerini içerir. Liste; genel haberlerden akademik makale arşivlerine, ileri düzey mühendislik bloglarından teknoloji kaynaklarına kadar genişletilmiştir.
 
-## 📰 Haber Siteleri
+ Akademik ve Bilimsel Yayınlar (YENİ)
 
-### 🌍 Global Haber Kaynakları
-- **Google Haberler**: `https://news.google.com/rss`  
-  Bölgesel ve kategorik beslemeler için özelleştirilebilir.
+Hakemli Dergiler ve Prestijli Yayınlar
 
-- **Yahoo Haberler**: `https://news.yahoo.com/rss/`  
-  Genel ve kategori bazlı haber beslemeleri sunar.
+Nature (Güncel Sayı): http://feeds.nature.com/nature/rss/current
+Dünyanın en prestijli multidisipliner bilim dergisi.
 
-- **BBC News**: `http://feeds.bbci.co.uk/news/rss.xml`  
-  Bölgesel ve tematik kanallar için farklı beslemeler mevcuttur.
+Science Magazine: https://www.science.org/rss/news_current.xml
+AAAS tarafından yayınlanan güncel bilimsel gelişmeler.
 
-- **CNN**: `https://rss.cnn.com/rss/edition.rss`  
-  Global haberler ve alt kategoriler için beslemeler.
+MIT Technology Review: https://www.technologyreview.com/feed/
+Gelişen teknolojilerin akademik ve endüstriyel analizi.
 
-- **Bing Haberler**: `https://www.bing.com/news/search?q=&format=RSS`  
-  Arama terimlerine göre özelleştirilebilir beslemeler.
+Scientific American: http://rss.sciam.com/ScientificAmerican-Global
+Popüler bilim ve derinlemesine makaleler.
 
-- **Reuters**: `https://www.reuters.com/tools/rss`  
-  Kapsamlı haber ve finans beslemeleri.
+ Makale Arşivleri (Preprint & Research)
 
-- **Al Jazeera**: `https://www.aljazeera.com/xml/rss/all.xml`  
-  Global perspektifle haberler.
+arXiv (Bilgisayar Bilimleri): http://export.arxiv.org/rss/cs
+Yapay zeka, kriptografi ve yazılım mühendisliği makaleleri.
 
-- **The Guardian**: `https://www.theguardian.com/uk/rss`  
-  Kategori bazlı RSS beslemeleri mevcuttur.
+arXiv (Fizik): http://export.arxiv.org/rss/physics
+Astrofizik ve kuantum fiziği güncellemeleri.
 
-- **New York Times**: `https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml`  
-  Farklı bölümler için ayrı beslemeler sunulur.
+IEEE Spectrum: https://spectrum.ieee.org/rss/fulltext
+Mühendislik ve uygulamalı bilimler dünyasından haberler.
 
-### 🇹🇷 Türkçe Haber Kaynakları
-- **Hürriyet**: `https://www.hurriyet.com.tr/rss`  
-  Kategorilere göre ayrı beslemeler mevcuttur.
+Araştırma Enstitüleri
 
-- **Milliyet**: `https://www.milliyet.com.tr/rss/rssnew/anasayfaRss.xml`  
-  Ana sayfa ve alt kategoriler için beslemeler.
+NASA Breaking News: https://www.nasa.gov/rss/dyn/breaking_news.rss
+Uzay araştırmaları ve görev güncellemeleri.
 
-- **Sabah**: `https://www.sabah.com.tr/rss/anasayfa.xml`  
-  Güncel haber RSS adresi.
+CERN News: https://home.cern/feed/rss.xml
+Parçacık fiziği ve laboratuvar gelişmeleri.
 
-- **Anadolu Ajansı (AA)**: `https://www.aa.com.tr/tr/rss/default?cat=guncel`  
-  Resmi haber ajansı beslemesi.
+ İleri Düzey Mühendislik Blogları (Engineering Blogs) (YENİ)
 
-- **NTV**: `https://www.ntv.com.tr/rss`  
-  Kategorilere göre özelleştirilebilir.
+Yazılım mimarisi, SRE, veri mühendisliği ve ölçeklenebilirlik üzerine teknik detaylar.
 
-- **TRT Haber**: `https://www.trthaber.com/rss`  
-  Resmi yayın kuruluşu beslemesi.
+Netflix Tech Blog: https://netflixtechblog.com/feed
+Mikroservisler, kaos mühendisliği ve yüksek ölçekli sistemler.
 
-## 💬 Sosyal Medya ve Topluluklar
-- **Reddit**: `https://www.reddit.com/r/{SUBREDDIT}/rss`  
-  Örnek: `https://www.reddit.com/r/technology/rss`
+Uber Engineering: https://eng.uber.com/feed/
+Lojistik algoritmaları, AI ve veri altyapısı.
 
-- **Pinterest**: `https://www.pinterest.com/{KULLANICI_ADI}.rss`  
-  Örnek: `https://www.pinterest.com/officialpinterest.rss`
+Meta (Facebook) Engineering: https://engineering.fb.com/feed/
+React, veri merkezleri ve yapay zeka altyapısı.
 
-## 💻 Teknoloji ve Yazılım
-- **Stack Overflow**: `https://stackoverflow.com/feeds`  
-  Etiketlere göre özelleştirilebilir.
+AWS Architecture Blog: https://aws.amazon.com/blogs/architecture/feed/
+Bulut mimarisi en iyi uygulamaları.
 
-- **GitHub**: `https://github.com/{KULLANICI_ADI}.atom`  
-  Kullanıcı aktiviteleri için Atom beslemesi.
+Stack Overflow Engineering: https://stackoverflow.blog/engineering/feed/
+Dünyanın en büyük geliştirici topluluğunun teknik altyapısı.
 
-- **Adobe Blog**: `https://blog.adobe.com/en/feed.xml`  
-  Ürün güncellemeleri ve yaratıcı içerikler.
+Stripe Engineering: https://stripe.com/blog/engineering/rss
+Fintech, ödeme sistemleri ve API tasarımı.
 
-## 🛒 Alışveriş ve E-Ticaret
-- **Amazon**: `https://www.amazon.com/rss/tag/{KATEGORI}`  
-  Örnek: `https://www.amazon.com/rss/tag/electronics`
+ Haber Siteleri
 
-- **Etsy**: Mağaza ve aramalar için özel RSS adresleri oluşturulabilir.  
-  Her mağazanın kendi RSS besleme adresi mevcuttur.
+ Global Haber Kaynakları
 
-## 🎵 Müzik ve Eğlence
-- **YouTube**: `https://www.youtube.com/feeds/videos.xml?channel_id={KANAL_ID}`  
-  Her kanal için benzersiz bir besleme adresi.
+Google Haberler: https://news.google.com/rss
 
-- **Spotify**: Podcast'ler için özel RSS beslemeleri.  
-  Her podcast'in kendi RSS adresi bulunur.
+Yahoo Haberler: https://news.yahoo.com/rss/
 
-## 💼 Kurumsal ve Resmi Bloglar
-- **LinkedIn Blog**: `https://blog.linkedin.com/rss`  
-  Kurumsal güncellemeler ve endüstri haberleri.
+BBC News: http://feeds.bbci.co.uk/news/rss.xml
 
-- **Zoom Blog**: `https://blog.zoom.us/feed/`  
-  Ürün güncellemeleri ve şirket haberleri.
+CNN: https://rss.cnn.com/rss/edition.rss
 
-- **Apple Haberler**: `https://www.apple.com/newsroom/rss-feed.rss`  
-  Resmi Apple duyuruları ve ürün lansmanları.
+Reuters: https://www.reuters.com/tools/rss
 
-## ⚽ Spor Haberleri
-- **ESPN**: `https://www.espn.com/espn/rss/news`  
-  Spor haberleri ve analizler.
+The Guardian: https://www.theguardian.com/uk/rss
 
-## 🎮 Oyun ve Dijital Platformlar
-- **Steam Haberleri**: `https://store.steampowered.com/feeds/news.xml`  
-  Oyun güncellemeleri ve duyurular.
+New York Times: https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
 
-- **Epic Games Store**: `https://www.epicgames.com/store/en-US/feed.xml`  
-  Ücretsiz oyunlar ve yeni çıkışlar.
+🇹🇷 Türkçe Haber Kaynakları
 
-## ✍️ Blog ve Yayın Platformları
-- **Medium**: `https://{YAYIN_ADI}.medium.com/feed`  
-  Örnek: `https://towardsdatascience.medium.com/feed`
+Hürriyet: https://www.hurriyet.com.tr/rss
 
-- **Quora**: `https://www.quora.com/rss/{KONU}`  
-  Örnek: `https://www.quora.com/rss/Technology`
+Milliyet: https://www.milliyet.com.tr/rss/rssnew/anasayfaRss.xml
 
-## 🔧 RSS Besleme Kullanım İpuçları
+Sabah: https://www.sabah.com.tr/rss/anasayfa.xml
 
-1. **Özelleştirilebilir Beslemeler**
-   - Süslü parantez içindeki değerleri (`{}`) kendi parametrelerinizle değiştirin
-   - Bazı siteler için oturum açmanız gerekebilir
-   - Bazı beslemeler için API anahtarı gerekebilir
+Anadolu Ajansı (AA): https://www.aa.com.tr/tr/rss/default?cat=guncel
 
-2. **Sık Karşılaşılan Sorunlar**
-   - RSS adresi çalışmıyorsa, sitenin RSS politikasında değişiklik olmuş olabilir
-   - Bazı siteler RSS beslemelerini sınırlayabilir veya engelleyebilir
-   - HTTPS protokolünü desteklemeyen beslemeler olabilir
+NTV: https://www.ntv.com.tr/rss
 
-3. **En İyi Uygulamalar**
-   - RSS okuyucunuzun cache özelliğini kullanın
-   - Çok sık güncelleme yapmaktan kaçının
-   - Mümkünse resmi RSS beslemelerini tercih edin
+TRT Haber: https://www.trthaber.com/rss
 
----
+ Teknoloji ve Yazılım (Genel)
 
-## 📝 Güncelleme Notları
+Hacker News (Top Links): https://news.ycombinator.com/rss
+Teknoloji dünyasının nabzı.
 
-- **Son Güncelleme**: Ocak 2024
-- **Kontrol Edilen Beslemeler**: Tüm beslemeler test edilmiş ve çalışır durumdadır
-- **Desteklenen RSS Versiyonları**: RSS 2.0, RSS 1.0, Atom
+Hacker News (Filtreli - 100+ Puan): https://hnrss.org/newest?points=100
+Sadece yüksek puanlı tartışmalar.
 
-## ⚠️ Sorumluluk Reddi
+Stack Overflow: https://stackoverflow.com/feeds
 
-Bu listedeki RSS beslemeleri düzenli olarak kontrol edilse de, servis sağlayıcılar herhangi bir zamanda besleme adreslerini değiştirebilir veya kullanımdan kaldırabilir. Bir beslemenin çalışmadığını fark ederseniz, lütfen bir Issue açarak bize bildirin.
+GitHub: https://github.com/{KULLANICI_ADI}.atom
+
+Adobe Blog: https://blog.adobe.com/en/feed.xml
+
+💬 Sosyal Medya ve Topluluklar
+
+Reddit: https://www.reddit.com/r/{SUBREDDIT}/rss
+
+Pinterest: https://www.pinterest.com/{KULLANICI_ADI}.rss
+
+Medium: https://{YAYIN_ADI}.medium.com/feed
+
+Alışveriş ve E-Ticaret
+
+Amazon: https://www.amazon.com/rss/tag/{KATEGORI}
+
+Etsy: Mağaza özelinde RSS oluşturulabilir.
+
+ Oyun ve Dijital Platformlar
+
+Steam Haberleri: https://store.steampowered.com/feeds/news.xml
+
+Epic Games Store: https://www.epicgames.com/store/en-US/feed.xml
+
+ Müzik ve Eğlence
+
+YouTube: https://www.youtube.com/feeds/videos.xml?channel_id={KANAL_ID}
+
+Spotify Podcast: Her podcast sayfasında bulunur.
+
+ RSS Besleme Kullanım İpuçları
+
+Akademik Kullanım: arXiv ve Nature gibi kaynaklar, literatür taraması yaparken "son eklenenleri" (new submissions) takip etmek için mükemmeldir.
+
+Bot Koruması: Bazı siteler (Medium, Twitter vb.) basit istekleri engelleyebilir. User-Agent header'ı kullanın (Bkz: fetcher.py).
+
+OPML İçe Aktarma: Tüm bu listeyi feeds.opml dosyasını indirerek favori RSS okuyucunuza (Feedly, Inoreader, Zotero) tek seferde ekleyebilirsiniz.
