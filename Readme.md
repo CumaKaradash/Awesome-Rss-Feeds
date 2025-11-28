@@ -1,80 +1,100 @@
-# RSS Beslemeleri Koleksiyonu
----
+# RSS Beslemeleri Koleksiyonu (Awesome RSS Feeds)
+
 ## Proje Hakkında
 
-Bu proje, popüler web siteleri ve servisler için kullanılabilir RSS/Atom beslemelerinin kapsamlı bir koleksiyonudur. Haber siteleri, sosyal medya platformları, teknoloji blogları ve daha fazlası için düzenli olarak güncellenen RSS kaynakları sunmaktadır.
+Bu proje, sadece popüler haber sitelerini değil, aynı zamanda akademik araştırmaları, mühendislik bloglarını ve teknik dökümanları takip etmek isteyenler için küratörlüğü yapılmış kapsamlı bir RSS/Atom koleksiyonudur.
+
+Sıradan bir link listesi olmanın ötesinde, araştırmacılar ve yazılım mühendisleri için özelleştirilmiş kaynaklar ve Python entegrasyon kodları içerir.
 
 ## İçindekiler
 
-- [Özellikler](#-özellikler)
-- [Desteklenen Servisler](#-desteklenen-servisler)
-- [Kullanım](#-kullanım)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Güncellemeler](#-güncellemeler)
-- [Lisans](#-lisans)
+- [Özellikler](#özellikler)
+- [Kategoriler](#kategoriler)
+- [Hızlı Kurulum (OPML)](#hızlı-kurulum-opml)
+- [Geliştirici Kullanımı (Python)](#geliştirici-kullanımı-python)
+- [Katkıda Bulunma](#katkıda-bulunma)
+- [Lisans](#lisans)
 
-##  Özellikler
+## Özellikler
 
--  Kategorilere ayrılmış RSS kaynakları
--  Düzenli olarak güncellenen bağlantılar
--  Türkçe ve global kaynaklar
--  Kolay entegrasyon
--  Mobil uyumlu beslemeler
+- 📚 **Akademik Odak**: arXiv, Nature, Science ve IEEE kaynakları
+- 🔧 **Teknik Derinlik**: Netflix, Uber, Google AI gibi şirketlerin mühendislik blogları
+- 📥 **Toplu İçe Aktarma**: .opml dosyası ile yüzlerce kaynağı tek tıkla okuyucunuza ekleme imkanı
+- 🤖 **Bot Korumalı Script**: Cloudflare veya bot korumasına takılmadan veri çeken örnek kodlar
+- 🇹🇷 **Yerel ve Global**: Türkçe haber kaynakları ve global otoriteler bir arada
 
-##  Desteklenen Servisler
+## Kategoriler
 
-###  Haber Siteleri
+Detaylı liste için [feeds.md](feeds.md) dosyasına bakınız. Öne çıkan başlıklar:
 
-#### Global Kaynaklar
-- **Google Haberler**: `https://news.google.com/rss`
-- **BBC News**: `http://feeds.bbci.co.uk/news/rss.xml`
-- **CNN**: `https://rss.cnn.com/rss/edition.rss`
-- **Reuters**: `https://www.reuters.com/tools/rss`
+- **Akademik & Bilim**: NASA, CERN, arXiv (CS/Physics)
+- **Engineering Blogs**: Big Tech şirketlerinin teknik makaleleri
+- **Haberler**: Yerel ve Global ajanslar
+- **Teknoloji**: Hacker News, Stack Overflow
+- **Sosyal Medya & Eğlence**: YouTube, Reddit, Steam
 
-#### Türkçe Kaynaklar
-- **Hürriyet**: `https://www.hurriyet.com.tr/rss`
-- **Milliyet**: `https://www.milliyet.com.tr/rss/rssnew/anasayfaRss.xml`
-- **Anadolu Ajansı**: `https://www.aa.com.tr/tr/rss/default?cat=guncel`
-- **TRT Haber**: `https://www.trthaber.com/rss`
+## Hızlı Kurulum (OPML)
 
-### Teknoloji ve Yazılım
-- **Stack Overflow**: `https://stackoverflow.com/feeds`
-- **GitHub**: `https://github.com/{KULLANICI_ADI}.atom`
-- **Adobe Blog**: `https://blog.adobe.com/en/feed.xml`
+RSS okuyucunuza (Feedly, Inoreader, Thunderbird vb.) tek tek link eklemekle uğraşmayın:
 
-### Oyun ve Dijital Platformlar
-- **Steam**: `https://store.steampowered.com/feeds/news.xml`
-- **Epic Games**: `https://www.epicgames.com/store/en-US/feed.xml`
+1. Bu depodaki `feeds.opml` dosyasını indirin
+2. RSS okuyucunuzun "Import OPML" seçeneğini kullanın
+3. Tüm kategoriler otomatik olarak listenize eklenecektir
 
-### Video ve Medya
-- **YouTube**: `https://www.youtube.com/feeds/videos.xml?channel_id={KANAL_ID}`
-- **Spotify**: Podcast bazlı RSS adresleri podcast sayfalarından elde edilebilir
+## Geliştirici Kullanımı (Python)
 
-[Tüm liste için tıklayın](feeds.md)
+Modern web siteleri (özellikle Cloudflare arkasındakiler), basit urllib veya feedparser isteklerini "bot" olarak algılayıp engelleyebilir. Aşağıdaki yöntem ile tarayıcı gibi davranarak veri çekebilirsiniz.
 
-##  Kullanım
+### Gereksinimler
 
-### RSS Okuyucu için
-1. İstediğiniz servisin RSS adresini kopyalayın
-2. RSS okuyucunuza yapıştırın
-3. Özelleştirilebilir beslemeler için `{PARAMETRE}` değerlerini değiştirin
-
-### API Entegrasyonu için
-```python
-import feedparser
-
-# RSS beslemesini okuma
-feed = feedparser.parse('RSS_ADRESİ')
-
-# Başlıkları listeleme
-for entry in feed.entries:
-    print(entry.title)
+```bash
+pip install feedparser requests
 ```
 
-##  Lisans
+### Örnek Kod
 
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+```python
+import feedparser
+import requests
+from io import BytesIO
 
-##  Projeye Destek Ol
+def fetch_rss(url):
+    # User-Agent header'ı ekleyerek gerçek bir tarayıcı taklidi yapıyoruz
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()  # HTTP hatalarını yakala
+        
+        feed = feedparser.parse(BytesIO(response.content))
+        
+        print(f"Kaynak: {feed.feed.get('title', 'Bilinmeyen Kaynak')}")
+        for entry in feed.entries[:5]:
+            print(f"- {entry.title} ({entry.link})")
+            
+    except Exception as e:
+        print(f"Hata oluştu: {e}")
 
-Eğer bu proje işinize yaradıysa, ⭐ vermeyi unutmayın!
+# Test: Netflix Mühendislik Blogu
+fetch_rss('https://netflixtechblog.com/feed')
+```
+
+Daha gelişmiş bir script için depodaki `fetcher.py` dosyasına göz atın.
+
+## Katkıda Bulunma
+
+1. Fork yapın
+2. Yeni bir dal (branch) oluşturun (`git checkout -b feature/YeniKaynak`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Yeni AI blogları eklendi'`)
+4. Dalınızı pushlayın (`git push origin feature/YeniKaynak`)
+5. Bir Pull Request oluşturun
+
+## Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır.
+
+---
+
+**Not**: Projeye katkıda bulunmak veya yeni RSS kaynakları önermek için issues bölümünü kullanabilirsiniz.
